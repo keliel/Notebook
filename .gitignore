@@ -1,18 +1,12 @@
-# Created by https://www.gitignore.io/api/sass,angular,visualstudiocode
-# Edit at https://www.gitignore.io/?templates=sass,angular,visualstudiocode
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-### Angular ###
-## Angular ##
 # compiled output
 /dist
 /tmp
 /out-tsc
-/app/**/*.js
-/app/**/*.js.map
 
 # dependencies
 /node_modules
-/bower_components
 
 # IDEs and editors
 /.idea
@@ -22,7 +16,8 @@
 *.launch
 .settings/
 *.sublime-workspace
-### VisualStudioCode ###
+
+# IDE - VSCode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -32,29 +27,13 @@
 # misc
 /.sass-cache
 /connect.lock
-/coverage/*
+/coverage
 /libpeerconnection.log
 npm-debug.log
 yarn-error.log
 testem.log
 /typings
 
-# e2e
-/e2e/*.js
-/e2e/*.map
-
 # System Files
 .DS_Store
 Thumbs.db
-
-### Sass ###
-.sass-cache/
-*.css.map
-*.sass.map
-*.scss.map
-
-### VisualStudioCode Patch ###
-# Ignore all local history of files
-.history
-
-# End of https://www.gitignore.io/api/sass,angular,visualstudiocode
