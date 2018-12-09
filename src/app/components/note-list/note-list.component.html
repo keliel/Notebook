@@ -1,5 +1,10 @@
-<ul class="note-list">
-  <li class="note-list__note" *ngFor="let note of noteList">
-    <nb-note [note]="note"></nb-note>
-  </li>
-</ul>
+<div class="note-list">
+  <select class="note-list__sort" [value]="currentSortMode" (change)="onSortChanged($event.target.options[$event.target.options.selectedIndex].value)">
+    <option *ngFor="let sortMode of sortModes" [value]="sortModeValues[sortMode]">{{ sortMode }}</option>
+  </select>
+  <ul class="note-list__list">
+    <li class="note-list__note" *ngFor="let note of noteList">
+      <nb-note [note]="note"></nb-note>
+    </li>
+  </ul>
+</div>

@@ -18,6 +18,6 @@ export class AppComponent implements OnInit {
   }
 
   onAdd(newNoteText: string): void {
-    this.notes = this.repository.insert(newNoteText);
+    this.notes.unshift(this.repository.create(newNoteText));
   }
 }
