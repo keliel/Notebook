@@ -14,7 +14,10 @@ export class NoteFormComponent {
   constructor() { }
 
   submit(): void {
-    //TODO: Save note, before emitting event to close edit mode.
-    this.closeEdit.emit(this.note);
+    if (this.note && this.note.length > 0) {
+      //TODO: Save note, before emitting event to close edit mode.
+      this.closeEdit.emit(this.note);
+      this.note = null;
+    }
   }
 }
