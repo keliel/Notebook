@@ -60,14 +60,14 @@ export class NotesRepositoryService {
   /**
    * Deletes the note with the specified ID.
    * @param id ID of the note to delete.
-   * @returns The removed note.
+   * @returns The updated notes.
    */
-  delete(id: string): Note {
+  delete(id: string): Note[] {
     let storedNotes = this.getAll();
     const storedNoteIndex = storedNotes.indexOf(storedNotes.find(x => x.id === id));
-    const deletedNote = storedNotes.splice(storedNoteIndex, 1)[0];
+    storedNotes.splice(storedNoteIndex, 1);
     this.updateNotesStorage(storedNotes);
-    return deletedNote;
+    return storedNotes;
   }
 
   /**
