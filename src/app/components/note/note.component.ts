@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'nb-note',
   templateUrl: './note.component.html',
   styleUrls: ['./note.component.less']
 })
-export class NoteComponent implements OnInit {
+export class NoteComponent {
 
-  constructor() { }
+  @Input() model: string;
 
-  ngOnInit() {
+  editMode = false;
+
+  edit(): void {
+    this.editMode = true;
   }
-
 }

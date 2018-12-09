@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'nb-note-form',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./note-form.component.less']
 })
 export class NoteFormComponent implements OnInit {
+
+  @Input() editNote: string;
 
   constructor() { }
 

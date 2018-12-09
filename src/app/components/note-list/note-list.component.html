@@ -1,3 +1,5 @@
-<p>
-  note-list works!
-</p>
+<ul class="note-list">
+  <li class="note-list__note" *ngFor="let note of notes">
+    <nb-note [model]="note"></nb-note>
+  </li>
+</ul>
