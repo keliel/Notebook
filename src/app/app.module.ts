@@ -1,18 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavigationComponent } from './shared/components/navigation/navigation.component';
+import { NoteFormComponent } from './components/note-form/note-form.component';
+import { NoteComponent } from './components/note/note.component';
+import { NoteListComponent } from './components/note-list/note-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent
+    NoteFormComponent,
+    NoteComponent,
+    NoteListComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

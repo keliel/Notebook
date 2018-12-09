@@ -107,5 +107,8 @@
       }
     }
   },
-  "defaultProject": "Notebook"
+  "defaultProject": "Notebook",
+  "cli": {
+    "packageManager": "yarn"
+  }
 }
