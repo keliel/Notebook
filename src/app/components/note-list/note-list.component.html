@@ -3,7 +3,7 @@
     <option class="" *ngFor="let sortMode of sortModes" [value]="sortModeValues[sortMode]">{{ sortMode }}</option>
   </select>
   <ul class="note-list__list row">
-    <li class="note-list__note col-sm-6 col-md-4 col-xl-3" *ngFor="let note of noteList">
+    <li class="note-list__note col-md-6 col-xl-4" *ngFor="let note of noteList">
       <nb-note [note]="note"></nb-note>
     </li>
   </ul>
