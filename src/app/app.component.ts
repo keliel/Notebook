@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UUID as UuidService } from 'angular2-uuid';
 import { Note } from './shared/models/note';
 import { LocalStorageService } from './shared/services/storage.service';
 
@@ -20,7 +21,7 @@ export class AppComponent implements OnInit {
   }
 
   onAdd(newNoteText: string): void {
-    this.notes.push({ text: newNoteText });
+    this.notes.push({ text: newNoteText, id: UuidService.UUID() });
     this.storageService.set<Array<Note>>(NOTE_STORAGE_KEY, this.notes);
   }
 }
