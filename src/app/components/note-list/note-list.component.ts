@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Note } from 'src/app/shared/models/note';
 
 @Component({
   selector: 'nb-note-list',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoteListComponent implements OnInit {
 
-  notes: Array<string> = ['test', 'test2'];
+  notes: Array<Note> = [{ text: 'Sample Note 1' }, { text: 'Sample Note 2' }];
 
   constructor() { }
 

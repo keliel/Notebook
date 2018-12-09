@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Note } from 'src/app/shared/models/note';
 
 @Component({
   selector: 'nb-note',
@@ -7,7 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class NoteComponent {
 
-  @Input() model: string;
+  @Input() note: Note;
 
   editMode = false;
 
@@ -15,8 +16,8 @@ export class NoteComponent {
     this.editMode = true;
   }
 
-  onEditClose(note: string): void {
+  onEditClose(note: Note): void {
     this.editMode = false;
-    this.model = note;
+    this.note = note;
   }
 }
