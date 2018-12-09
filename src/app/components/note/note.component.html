@@ -5,6 +5,7 @@
         {{ note.text }}
       </p>
     </div>
+    <i class="nb-note__remove">&times;</i>
   </ng-container>
   <ng-template #elseTemplate>
     <div class="nb-note__content" (clickOutside)="closeEdit()" [clickOutsideEvents]="'click,touchstart'"

@@ -1,13 +1,16 @@
 @import "../../shared/styles/_entry.less";
 
 @note-bg-color: @secondary;
+@note-contrast-color: darken(@note-bg-color, 40);
+@remove-icon-size: 1.2rem;
 
 .nb-note {
+  position: relative;
+  border: 2px solid @note-contrast-color;
   border-radius: 0.15em;
-  border: 2px solid darken(@note-bg-color, 40);
 
   &__content {
-    padding: @grid-gutter-width/2;
+    padding: @spacer;
     background-color: @note-bg-color;
     transition: background-color 300ms;
 
@@ -18,8 +21,29 @@
       }
     }
   }
-  
+
   &__text {
     margin: 0;
+  }
+
+  &__remove {
+    position: absolute;
+    top: @spacer/2;
+    right: @spacer/2;
+    height: @remove-icon-size;
+    width: @remove-icon-size;
+    border-radius: 50%;
+    background-color: @note-contrast-color;
+    color: @note-bg-color;
+    font-size: @remove-icon-size;
+    font-weight: 700;
+    line-height: @remove-icon-size/5*4;
+    text-align: center;
+    transition: background-color 300ms;
+
+    &:hover {
+      background-color: darken(@note-contrast-color, 10);
+      cursor: pointer;
+    }
   }
 }
