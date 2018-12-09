@@ -1,17 +1,19 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'nb-note-form',
   templateUrl: './note-form.component.html',
   styleUrls: ['./note-form.component.less']
 })
-export class NoteFormComponent implements OnInit {
+export class NoteFormComponent {
 
-  @Input() editNote: string;
+  @Input() note: string;
+  @Output() closeEdit = new EventEmitter<string>();
 
   constructor() { }
 
-  ngOnInit() {
+  submit(): void {
+    //TODO: Save note, before emitting event to close edit mode.
+    this.closeEdit.emit(this.note);
   }
-
 }

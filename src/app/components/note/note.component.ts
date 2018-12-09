@@ -14,4 +14,9 @@ export class NoteComponent {
   edit(): void {
     this.editMode = true;
   }
+
+  onEditClose(note: string): void {
+    this.editMode = false;
+    this.model = note;
+  }
 }
