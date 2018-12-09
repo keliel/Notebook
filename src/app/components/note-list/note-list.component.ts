@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Note } from 'src/app/shared/models/note';
 
 @Component({
   selector: 'nb-note-list',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NoteListComponent implements OnInit {
 
-  @Input() noteList: Array<string>;
+  @Input() noteList: Array<Note>;
 
   constructor() { }
 

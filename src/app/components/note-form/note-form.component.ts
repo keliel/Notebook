@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Note } from 'src/app/shared/models/note';
 
 @Component({
   selector: 'nb-note-form',
@@ -7,16 +8,18 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 })
 export class NoteFormComponent implements OnInit {
 
-  @Input() note: string;
+  @Input() note: Note;
   @Input() addMode = false;
-  @Output() closeEdit = new EventEmitter<string>();
+  @Output() closeEdit = new EventEmitter<Note>();
 
+  private originalValue;
   model: string;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.model = this.note;
+    this.originalValue = this.note.text;
+    this.model = this.originalValue;
   }
 
   /**
@@ -24,11 +27,11 @@ export class NoteFormComponent implements OnInit {
    * Definitely emit closeEdit event.
    */
   submit(): void {
-    let result = this.note;
+    let result = this.originalValue;
     let trimmedInput = this.model ? this.model.trim() : '';
 
     // Check if there is input and if it is different from before
-    if (trimmedInput.length > 0 && trimmedInput !== this.note) {
+    if (trimmedInput.length > 0 && trimmedInput !== this.originalValue) {
       //TODO: Save note, before emitting event to close edit mode.
       result = trimmedInput;
     }
