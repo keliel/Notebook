@@ -1,6 +1,11 @@
-<p *ngIf="!editMode; else elseTemplate" (click)="edit()">
-  {{ note.text }}
-</p>
+<ng-container *ngIf="!editMode; else elseTemplate">
+  <p (click)="edit()">
+    {{ note.text }}
+  </p>
+  <p *ngIf="!editMode; else elseTemplate">
+    {{ note.id }}
+  </p>
+</ng-container>
 <ng-template #elseTemplate>
   <nb-note-form [note]="note" (closeEdit)="onEditClose($event)"></nb-note-form>
 </ng-template>
