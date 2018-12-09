@@ -35,4 +35,13 @@ export class LocalStorageService {
   delete(key: string): void {
     LocalStorageService.store.removeItem(key);
   }
+
+  /**
+   * Checks if the entry identified by the given key is present in local storage
+   *
+   * @param key Key of the entry
+   */
+  exists(key: string): boolean {
+    return this.get(key) != null;
+  }
 }
