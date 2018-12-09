@@ -25,14 +25,16 @@ export class NoteFormComponent implements OnInit {
    */
   submit(): void {
     let result = this.note;
+    let trimmedInput = this.model ? this.model.trim() : '';
 
     // Check if there is input and if it is different from before
-    if (this.model && this.model.length > 0 && this.model !== this.note) {
+    if (trimmedInput.length > 0 && trimmedInput !== this.note) {
       //TODO: Save note, before emitting event to close edit mode.
-      result = this.model;
+      result = trimmedInput;
     }
-
-    this.closeEdit.emit(result);
+    if (result) {
+      this.closeEdit.emit(result);
+    }
     this.model = null;
   }
 }
