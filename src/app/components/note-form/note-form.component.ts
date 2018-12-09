@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Note } from 'src/app/shared/models/note';
 
 @Component({
   selector: 'nb-note-form',
@@ -7,8 +8,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class NoteFormComponent {
 
-  @Input() note: string;
-  @Output() closeEdit = new EventEmitter<string>();
+  @Input() note: Note;
+  @Output() closeEdit = new EventEmitter<Note>();
 
   constructor() { }
 
