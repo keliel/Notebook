@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   notes: Array<string> = ['test', 'test2'];
-  model: string;
 
   onAdd(newNote: string): void {
     this.notes.push(newNote);
