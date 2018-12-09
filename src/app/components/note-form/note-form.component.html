@@ -1,2 +1,7 @@
-<input type="text" [(ngModel)]="model" name="NoteText"/>
-<button (click)="submit()">{{ addMode ? 'Add' : 'Save' }}</button>
+<form class="nb-add-form">
+  <div class="form-group">
+    <label for="NoteText" class="sr-only">Note text</label>
+    <textarea class="form-control" [(ngModel)]="model" id="NoteText" name="NoteText" rows="4"></textarea>
+  </div>
+  <button type="button" class="nb-add-form__btn" (click)="submit()">{{ addMode ? 'Add note' : 'Save note' }}</button>
+</form>
