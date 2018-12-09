@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   notes: Array<string> = ['test', 'test2'];
+  model: string;
 }
