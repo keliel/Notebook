@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'Notebook';
+  notes: Array<string> = ['test', 'test2'];
+
+  onAdd(newNote: string): void {
+    this.notes.push(newNote);
+  }
 }

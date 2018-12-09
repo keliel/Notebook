@@ -1,3 +1,2 @@
-<p (click)="submit()">
-  note-form works!
-</p>
+<input type="text" [(ngModel)]="model" name="NoteText"/>
+<button (click)="submit()">{{ addMode ? 'Add' : 'Save' }}</button>

@@ -1,1 +1,2 @@
-<nb-note-list></nb-note-list>
+<nb-note-form [addMode]="true" (closeEdit)="onAdd($event)"></nb-note-form>
+<nb-note-list [noteList]="notes"></nb-note-list>
