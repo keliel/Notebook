@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Note } from './shared/models/note';
 
 @Component({
   selector: 'nb-root',
@@ -6,9 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  notes: Array<string> = ['test', 'test2'];
+  notes: Array<Note> = [];
 
-  onAdd(newNote: string): void {
-    this.notes.push(newNote);
+  onAdd(newNoteText: string): void {
+    this.notes.push({ text: newNoteText });
   }
 }

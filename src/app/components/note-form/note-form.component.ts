@@ -18,7 +18,7 @@ export class NoteFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.originalValue = this.note.text;
+    this.originalValue = this.note ? this.note.text : null;
     this.model = this.originalValue;
   }
 
