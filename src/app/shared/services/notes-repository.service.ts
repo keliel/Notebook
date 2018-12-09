@@ -17,14 +17,15 @@ export class NotesRepositoryService {
    * @param text The text for the note.
    * @returns The updated stored notes.
    */
-  insert(text: string): Array<Note> {
+  create(text: string): Note {
     let storedNotes = this.getAll();
-    storedNotes.push({
+    const newNote = {
       text: text,
       id: UuidService.UUID()
-    });
+    };
+    storedNotes.push(newNote);
     this.updateNotesStorage(storedNotes);
-    return storedNotes;
+    return newNote;
   }
 
   /**
