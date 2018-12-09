@@ -1,2 +1,9 @@
-<nb-note-form [addMode]="true" (closeEdit)="onAdd($event)"></nb-note-form>
-<nb-note-list [noteList]="notes"></nb-note-list>
+<header class="sticky-top bg-secondary nb-header">
+  <nav class="navbar navbar-secondary container">
+    <span class="navbar-brand" href="#">Notebook</span>
+  </nav>
+</header>
+<div class="container">
+  <nb-note-form [addMode]="true" (closeEdit)="onAdd($event)"></nb-note-form>
+  <nb-note-list [noteList]="notes"></nb-note-list>
+</div>
