@@ -8,6 +8,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class NoteFormComponent {
 
   @Input() note: string;
+  @Input() addMode = false;
   @Output() closeEdit = new EventEmitter<string>();
 
   constructor() { }
