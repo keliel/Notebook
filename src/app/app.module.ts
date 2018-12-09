@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { NoteFormComponent } from './components/note-form/note-form.component';
 import { NoteComponent } from './components/note/note.component';
 import { NoteListComponent } from './components/note-list/note-list.component';
+import { LocalStorageService } from './shared/services/storage.service';
+import { NotesRepositoryService } from './shared/services/notes-repository.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,10 @@ import { NoteListComponent } from './components/note-list/note-list.component';
     BrowserModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [
+    LocalStorageService,
+    NotesRepositoryService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

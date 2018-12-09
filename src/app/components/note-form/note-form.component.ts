@@ -15,8 +15,6 @@ export class NoteFormComponent implements OnInit {
   private originalValue;
   model: string;
 
-  constructor() { }
-
   ngOnInit(): void {
     this.originalValue = this.note ? this.note.text : null;
     this.model = this.originalValue;
@@ -32,7 +30,6 @@ export class NoteFormComponent implements OnInit {
 
     // Check if there is input and if it is different from before
     if (trimmedInput.length > 0 && trimmedInput !== this.originalValue) {
-      //TODO: Save note, before emitting event to close edit mode.
       result = trimmedInput;
     }
     if (result) {
