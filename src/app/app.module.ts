@@ -7,6 +7,7 @@ import { NoteFormComponent } from './components/note-form/note-form.component';
 import { NoteComponent } from './components/note/note.component';
 import { NoteListComponent } from './components/note-list/note-list.component';
 import { LocalStorageService } from './shared/services/storage.service';
+import { NotesRepositoryService } from './shared/services/notes-repository.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LocalStorageService } from './shared/services/storage.service';
     FormsModule,
   ],
   providers: [
-    LocalStorageService
+    LocalStorageService,
+    NotesRepositoryService,
   ],
   bootstrap: [AppComponent]
 })
