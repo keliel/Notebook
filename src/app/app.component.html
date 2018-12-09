@@ -4,6 +4,8 @@
   </nav>
 </header>
 <div class="container">
-  <nb-note-form [addMode]="true" (closeEdit)="onAdd($event)"></nb-note-form>
-  <nb-note-list [noteList]="notes"></nb-note-list>
+  <main class="nb-main">
+    <nb-note-form [addMode]="true" (closeEdit)="onAdd($event)"></nb-note-form>
+    <nb-note-list [noteList]="notes"></nb-note-list>
+  </main>
 </div>
