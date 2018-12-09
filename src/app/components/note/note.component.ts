@@ -16,8 +16,8 @@ export class NoteComponent {
     this.editMode = true;
   }
 
-  onEditClose(note: Note): void {
+  onEditClose(noteText: string): void {
     this.editMode = false;
-    this.note = note;
+    this.note.text = noteText;
   }
 }
