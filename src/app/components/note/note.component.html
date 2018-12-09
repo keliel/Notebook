@@ -7,7 +7,8 @@
     </div>
   </ng-container>
   <ng-template #elseTemplate>
-    <div class="nb-note__content">
+    <div class="nb-note__content" (clickOutside)="closeEdit()" [clickOutsideEvents]="'click,touchstart'"
+         [delayClickOutsideInit]="true">
       <nb-note-form [note]="note" (closeEdit)="onEditClose($event)"></nb-note-form>
     </div>
   </ng-template>

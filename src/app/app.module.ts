@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ClickOutsideModule } from 'ng-click-outside';
 
 import { AppComponent } from './app.component';
 import { NoteFormComponent } from './components/note-form/note-form.component';
@@ -19,6 +20,7 @@ import { NotesRepositoryService } from './shared/services/notes-repository.servi
   imports: [
     BrowserModule,
     FormsModule,
+    ClickOutsideModule,
   ],
   providers: [
     LocalStorageService,
