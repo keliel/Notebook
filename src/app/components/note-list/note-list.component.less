@@ -1,4 +1,13 @@
 @import "../../shared/styles/_entry.less";
 .note-list {
-  padding: @grid-gutter-width 0;
+  padding: (@spacer * 2) 0;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__note {
+    margin-bottom: @spacer;
+  }
 }

@@ -1,0 +1,25 @@
+@import "../../shared/styles/_entry.less";
+
+@note-bg-color: @secondary;
+
+.nb-note {
+  border-radius: 0.15em;
+  border: 2px solid darken(@note-bg-color, 40);
+
+  &__content {
+    padding: @grid-gutter-width/2;
+    background-color: @note-bg-color;
+    transition: background-color 300ms;
+
+    &--view {
+      &:hover {
+        background-color: fade(@note-bg-color, 50);
+        cursor: pointer;
+      }
+    }
+  }
+  
+  &__text {
+    margin: 0;
+  }
+}
