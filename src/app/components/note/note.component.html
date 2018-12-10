@@ -1,0 +1,16 @@
+<article class="nb-note" id="note.id">
+  <ng-container *ngIf="!editMode; else elseTemplate">
+    <div class="nb-note__content nb-note__content--view" (click)="edit()">
+      <p class="nb-note__text">
+        {{ note.text }}
+      </p>
+    </div>
+    <i class="nb-note__remove" (click)="remove()">&times;</i>
+  </ng-container>
+  <ng-template #elseTemplate>
+    <div class="nb-note__content" (clickOutside)="closeEdit()" [clickOutsideEvents]="'click,touchstart'"
+         [delayClickOutsideInit]="true">
+      <nb-note-form [note]="note" (closeEdit)="onEditClose($event)"></nb-note-form>
+    </div>
+  </ng-template>
+</article>
