@@ -4,7 +4,7 @@
   </select>
   <ul class="note-list__list row">
     <li class="note-list__note col-md-6 col-xl-4" *ngFor="let note of noteList">
-      <nb-note [note]="note"></nb-note>
+      <nb-note [note]="note" (removeNote)="onNoteRemove($event)"></nb-note>
     </li>
   </ul>
 </div>

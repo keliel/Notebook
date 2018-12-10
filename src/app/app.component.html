@@ -6,6 +6,6 @@
 <div class="container">
   <main class="nb-main">
     <nb-note-form [addMode]="true" (closeEdit)="onAdd($event)"></nb-note-form>
-    <nb-note-list [noteList]="notes"></nb-note-list>
+    <nb-note-list [noteList]="notes" (removeNote)="onNoteRemove($event)"></nb-note-list>
   </main>
 </div>

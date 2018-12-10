@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Note } from 'src/app/shared/models/note';
 import { NotesRepositoryService } from 'src/app/shared/services/notes-repository.service';
 
@@ -10,6 +10,7 @@ import { NotesRepositoryService } from 'src/app/shared/services/notes-repository
 export class NoteComponent {
 
   @Input() note: Note;
+  @Output() removeNote = new EventEmitter<Note>();
   editMode = false;
 
   constructor(private repository: NotesRepositoryService) { }
@@ -26,5 +27,9 @@ export class NoteComponent {
     this.note.text = noteText;
     this.repository.update(this.note);
     this.closeEdit();
+  }
+
+  remove(): void {
+    this.removeNote.emit(this.note);
   }
 }

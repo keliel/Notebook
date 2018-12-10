@@ -20,4 +20,8 @@ export class AppComponent implements OnInit {
   onAdd(newNoteText: string): void {
     this.notes.unshift(this.repository.create(newNoteText));
   }
+
+  onNoteRemove(noteToRemove: Note): void {
+    this.notes = this.repository.delete(noteToRemove.id);
+  }
 }
