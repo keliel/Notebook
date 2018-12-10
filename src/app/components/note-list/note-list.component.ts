@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Note } from 'src/app/shared/models/note';
 import { SortMode } from './sort-mode.enum';
 
@@ -10,14 +10,17 @@ import { SortMode } from './sort-mode.enum';
 export class NoteListComponent implements OnInit {
 
   @Input() noteList: Array<Note>;
+  @Output() removeNote = new EventEmitter<Note>();
   sortModeValues = SortMode;
   sortModes: Array<string> = Object.keys(SortMode);
   currentSortMode = SortMode.Ascending;
 
-  constructor() { }
-
   ngOnInit() {
     this.sortNotesList(this.currentSortMode);
+  }
+
+  onNoteRemove(noteToRemove: Note): void {
+    this.removeNote.emit(noteToRemove);
   }
 
   onSortChanged(sortMode: SortMode): void {
