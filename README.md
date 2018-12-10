@@ -1,27 +1,34 @@
 # Notebook
 
+Trial task for job application
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
 
-## Development server
+## Thought process
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### List
 
-## Code scaffolding
+I felt like a notes list would be a nice way to display some information.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Styling
 
-## Build
+For simplicity reasons I used bootstrap for some general layouting and responsiveness. Most sticky notes are yellow. Changing the bootstrap color variables made it easy, to get some coherent styling.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Instead of SCSS I used Less in this project. As I have used it before, this was not a huge issue. A Bootstrap 4 source code port from SCSS to Less was also available, making the Bootstrap footprint smaller.
 
-## Running unit tests
+### Special Feature
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Maybe not **THAT** special. But as there was no mention of deleting entries in the initial project requirements, I decided to implement this. Another idea was manual sorting or some kind of **TODO** extension. But in terms of scope and timeboxing, simple deletion of notes seemed much more useful for an MVP.
 
-## Running end-to-end tests
+## Setup
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Packages
 
-## Further help
+Run `yarn` to get all updated packages.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Development server
+
+Run `yarn start` or `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+### Build
+
+Run `yarn build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
