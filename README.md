@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### List
 
-I felt like a notes list would be a nice way to display some information.
+I felt like a notes list would be a nice way to display some information. No special navigation would be needed and it is one of the first things that come to mind, thinking about lists.
 
 ### Styling
 
